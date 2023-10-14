@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
@@ -18,8 +19,10 @@ if(process.env.NODE_ENV === 'development'){
     app.use(morgan('dev'))
 }
 
-//Handlebars config
+//Static folder
+app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', require('./routes/index'))
+//Handlebars config
 app.engine('.hbs', engine({defaultLayout: 'main',extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
