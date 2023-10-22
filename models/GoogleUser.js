@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const UserSchema = new mongoose.Schema({
+
+const GoogleUserSchema = new mongoose.Schema({
     googleId: {type: String, required:true},
     displayName: {type: String, required:true},
     firstName: {type: String, required:true},
@@ -10,4 +11,4 @@ const UserSchema = new mongoose.Schema({
 })
 
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('GoogleUser', GoogleUserSchema)
