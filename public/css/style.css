@@ -1,12 +1,67 @@
 p {
     margin: 10px 0 !important;
 }
-.login-container{
-    font-size: 25px;
+
+.login-container {
+    font-size: 2.5vw; /* Tamaño de fuente más grande y responsive */
     width: 30%;
+    height: 50%;
     margin-top: 50px;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenedor de inicio de sesión */
+    border-radius: 20px; /* Borde redondeado para el contenedor de inicio de sesión */
+    padding: 10px; /* Espaciado interno para el contenedor de inicio de sesión */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del contenedor de inicio de sesión */
 }
-.login-text{
+
+.card {
+    border-radius: 20px; /* Ajusta el valor según el radio de borde que desees */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para la tarjeta */
+}
+
+.btn {
+    background-color: #F26444;
+    color: #fff;
+    
+    padding-bottom: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.0vw;
+}
+
+.background-image {
+    background-image: url('../assets/back3.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-text {
     font-size: 2.7vw;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    
+    font-weight: bold;
+    font-size: 1.5vw; /* Tamaño de fuente más pequeño y responsive */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 2vw; /* Tamaño de relleno más grande y responsive */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5vw; /* Tamaño de fuente más pequeño y responsive */
+}
+
+.alt-login-text {
+    margin: 5px 0; /* Reducimos el margen superior e inferior */
+    font-size: 1.2vw; /* Tamaño de fuente más pequeño y responsive */
 }
