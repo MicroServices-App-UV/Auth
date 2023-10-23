@@ -6,6 +6,8 @@ const connectDB = require('./config/db')
 const {engine} = require('express-handlebars')
 const passport = require('passport')
 const session =  require('express-session')
+const bodyParser = require('body-parser');
+
 
 
 // Load config 
@@ -27,6 +29,10 @@ if(process.env.NODE_ENV === 'development'){
 //Handlebars
 app.engine('.hbs', engine({defaultLayout: 'main',extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+//Body middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Sessions middleware
 app.use(session({ secret: 'keyboard cat',  resave: false, saveUninitialized:false  }))
