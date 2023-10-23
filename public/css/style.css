@@ -4,18 +4,18 @@ p {
 
 .login-container {
    
-    width: 30%;
-    margin-top: 40px;
+    width: 35%;
+    margin-top: 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenedor de inicio de sesión */
     border-radius: 20px; /* Borde redondeado para el contenedor de inicio de sesión */
-    padding: 10px; /* Espaciado interno para el contenedor de inicio de sesión */
+    padding: 20px; /* Espaciado interno para el contenedor de inicio de sesión */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del contenedor de inicio de sesión */
     font-size: 1.0vw;
 }
 
 .card {
     border-radius: 20px; /* Ajusta el valor según el radio de borde que desees */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para la tarjeta */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para la tarjeta */
 }
 
 .left-column {
