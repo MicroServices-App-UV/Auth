@@ -1,28 +1,39 @@
 <div class="container">
-        <h1 class="login-text">ThunderFood</h1>
-        <div class="section">
-            <p class="lead">Share moments, share Food</p>
-        </div>
-        <div class="divider"></div>
-        <div class="section">
-            <form action="/login" method="post">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn">
-                    Login
-                </button>
-            </form>
-            <p class="alt-login-text">Or log in with Google:</p>
-            <a href="/auth/google" class="btn ">
-                <i class="fab fa-google left"></i>Log In With Google
-            </a>
-            <p class="alt-login-text">New here? <a href="/signup">Create an account</a></p>
-            
-        </div>
+  <section class="hero">
+    <div class="left-column">
+      <a href="/" class="btn">
+        <i class="fab left"></i>Back
+      </a>
     </div>
+    <div class="right-column">
+      <h1 class="login-text">ThunderFood</h1>
+    </div>
+
+  </section>
+  <div class="section">
+    <p class="lead">Share moments, share Food</p>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" class="btn">
+        Login
+      </button>
+    </form>
+    <p class="alt-login-text">Or log in with Google:</p>
+    <a href="/auth/google" class="btn">
+      <i class="fab fa-google left"></i>Log In With Google
+    </a>
+    <p class="alt-login-text">New here?
+      <a href="/signup">Create an account</a></p>
+
+  </div>
+</div>
