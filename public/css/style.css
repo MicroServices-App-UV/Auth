@@ -5,7 +5,7 @@ p {
 .login-container {
    
     width: 30%;
-    margin-top: 50px;
+    margin-top: 40px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenedor de inicio de sesión */
     border-radius: 20px; /* Borde redondeado para el contenedor de inicio de sesión */
     padding: 10px; /* Espaciado interno para el contenedor de inicio de sesión */
