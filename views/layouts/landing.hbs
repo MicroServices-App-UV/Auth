@@ -1,0 +1,228 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ThunderFood - Share moments, share Food</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+    
+        <style>
+            .container {
+            width: 100%;
+            max-width: 100%; /* Esto asegura que el ancho no supere el ancho de la pantalla */
+            padding: 0; /* Elimina cualquier relleno para que el contenido llegue a los bordes */
+            margin: 0 auto; /* Para centrar el contenido horizontalmente */
+            }
+            .hero-content {
+            display: grid;
+            grid-template-columns: auto 1fr; /* Dos columnas: una para la imagen (auto) y otra para el contenido (1fr) */
+            grid-column-gap: 20px; /* Espacio entre las columnas */
+            align-items: center; /* Centra verticalmente los elementos en el centro de la fila */
+            }
+
+            .left-column {
+            grid-column: 1; /* La imagen se ubicará en la primera columna */
+            }
+
+            .right-column {
+            grid-column: 2; /* El contenido se ubicará en la segunda columna */
+            }
+
+            .hero-content img {
+            max-width: 100%;
+            border-top-right-radius: 400px;
+            border-bottom-right-radius: 350px;
+            height: auto;
+            margin-top:70px;
+            }
+
+            .hero-content h1 {
+            /* Estilos para el título si es necesario */
+            }
+             
+            /* Header Styles */
+            header {
+            
+            }
+
+            nav{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            nav ul {
+            list-style: none;
+            background-color: #FBB500;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Utilizamos flexbox para alinear los elementos */
+            justify-content: flex-end; /* Alineamos los elementos a la derecha */
+            }
+
+            nav ul li {
+            margin-right: 50px; /* Adjust the spacing between menu items */
+            
+
+            }
+
+            nav ul li a {
+            text-decoration: none;
+            color: #fff; /* Text color for menu items */
+            font-size: large;
+            font-weight: bold;
+            
+            }
+
+            /* Hero Section Styles */
+            .hero {
+            background: url('hero-background.jpg') center center no-repeat;
+            background-size: cover;
+            color: #333; /* Text color for hero section */
+            
+            }
+
+            .hero-content {
+            text-align: center;
+            }
+
+           .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #333; /* Color del texto */
+            font-family: 'Roboto', sans-serif; /* Utiliza la fuente Lobster */
+            text-transform: uppercase; /* Convertir el texto a mayúsculas */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+            letter-spacing: 2px; /* Espaciado entre letras */
+            text-align: center; /* Alineación del texto (centro) */
+            padding: 10px; /* Relleno alrededor del texto */
+            border-radius: 10px; /* Bordes redondeados */
+        
+            }
+
+
+            .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555; /* Color del texto */
+            font-family: 'Roboto', sans-serif; /* Fuente de texto */
+            text-align: center; /* Alineación del texto al centro */
+            line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+            letter-spacing: 1px; /* Espaciado entre letras */
+            
+            }
+            .btn {
+            background-color: #F9C84D;
+            color: #fff;
+            padding-bottom: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            }
+
+
+            /* Features Section Styles */
+            .features .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas en cada fila */
+            grid-gap: 20px; /* Espacio entre las características */
+            padding-top: 100px;
+            padding-bottom: 100px;
+            }
+
+            .feature {
+            text-align: center; /* Alineación del contenido al centro */
+            }
+
+            .feature img {
+            width: 300px; /* Tamaño de la imagen cuadrada */
+            height: 300px;
+            border-radius: 50px; /* Redondear la imagen para que sea un cuadro */
+            margin: 0 auto; /* Centrar la imagen horizontalmente */
+            }
+
+            .feature h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            }
+
+            .feature p {
+            font-size: 16px;
+            margin-top: 10px;
+            }
+
+            /* Contact Section Styles */
+            .contact {
+            background: #000000; /* Background color for contact section */
+            color: #fff; /* Text color for contact section */
+            padding: 100px 0; /* Adjust the padding as needed */
+            }
+
+            .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            }
+
+            .contact p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            }
+
+            form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #777; /* Adjust the border color */
+            border-radius: 5px;
+            background: #444; /* Background color for form fields */
+            color: #fff; /* Text color for form fields */
+            }
+
+            form button {
+            background-color: #FBB500;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            }
+
+            /* Footer Styles */
+            footer {
+            background: #8F8F8F; /* Background color for footer */
+            padding: 20px 0; /* Adjust the padding as needed */
+            text-align: center;
+            }
+
+            footer p {
+            color: #fff;
+            font-size: 14px;
+            }
+
+            /* General Styles */
+            a {
+            color: #F29D35;
+            text-decoration: none;
+            transition: 0.5s;
+            }
+
+            a:hover {
+            color: #fff;
+            }
+
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            {{{body}}}
+        </div>
+    
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </html>
