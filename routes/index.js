@@ -16,7 +16,9 @@ router.get("/signup", (req, res) => {
 
 // @ desc SignUp post receiver
 // @route POST /signup
-router.post("/signup", userController.registerUser);
+router.post("/signup", userController.registerUser, (req, res) => {
+  res.redirect("/graphql/signup");
+});
 
 // @ desc Register
 // @route GET /register
