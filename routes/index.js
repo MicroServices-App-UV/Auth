@@ -17,6 +17,10 @@ router.get("/signup", (req, res) => {
 // @ desc SignUp post receiver
 // @route POST /signup
 router.post("/signup", userController.registerUser, (req, res) => {
+  delete req.body.password;
+  req.body._id = req._id;
+  req.session.user = req.body;
+  console.log("GEROOOOOO", req.session.user._id.toString());
   res.redirect("/graphql/signup");
 });
 

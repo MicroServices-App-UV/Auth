@@ -36,11 +36,11 @@ const shareUserInfo = async (req, res, next) => {
         }
       }`,
       {
-        _id: "1",
-        firstName: "Sebastian",
-        lastName: "Caicedo",
-        username: "sdrivert",
-        email: "sdrivert@hotmail.com",
+        _id: req.session.user._id,
+        firstName: req.session.user.firstName,
+        lastName: req.session.user.lastName,
+        username: req.session.user.username,
+        email: req.session.user.email,
       }
     )
       .then((data) =>
