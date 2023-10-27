@@ -9,6 +9,16 @@ const addUser = async (userData) => {
     throw error;
   }
 };
+const getUser = async (userId) => {
+  try {
+    const user = await User.findById({ _id: userId.toString() });
+    return user;
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   addUser,
+  getUser,
 };

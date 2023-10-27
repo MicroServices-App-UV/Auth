@@ -11,6 +11,15 @@ const registerUser = async (req, res, next) => {
   }
 };
 
+const getUser = async (req, res, next) => {
+  try {
+    const user = await userService.getUser(req.params.id);
+    req.user = user;
+    next();
+  } catch (err) {}
+};
+
 module.exports = {
   registerUser,
+  getUser,
 };
