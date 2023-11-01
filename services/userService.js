@@ -18,7 +18,21 @@ const getUser = async (userId) => {
   }
 };
 
+const updateUser = async (userId, updatedFields) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { $set: updatedFields },
+      { new: true }
+    );
+    return updatedUser;
+  } catch (err) {
+    throw err;
+  }
+};
+
 module.exports = {
   addUser,
   getUser,
+  updateUser,
 };
