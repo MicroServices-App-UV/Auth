@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/UserController");
-
+const { registerUser } = require("../controllers/UserController");
 // @ desc Login/Landing page
 // @route GET /
 router.get("/login", (req, res) => {
@@ -16,7 +15,12 @@ router.get("/signup", (req, res) => {
 
 // @ desc SignUp post receiver
 // @route POST /signup
-router.post("/signup", userController.registerUser);
+router.post("/signup", registerUser, (req, res) => {
+  delete req.body.password;
+  req.body._id = req._id;
+  req.session.user = req.body;
+  res.redirect("/graphql/signup");
+});
 
 // @ desc Register
 // @route GET /register

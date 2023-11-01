@@ -2,15 +2,35 @@ const userService = require("../services/userService");
 
 const registerUser = async (req, res, next) => {
   try {
-    await userService.addUser(req.body);
-    res.send("<h1> El usario se ha registrado correctamente</h1>");
+    const newUser = await userService.addUser(req.body);
+    const userId = newUser._id;
+    req._id = userId;
     next();
   } catch (err) {
     console.error(err);
-    res.send("<h1>El usuario NO se ha podido registrar</h1>");
+  }
+};
+
+const getUser = async (req, res, next) => {
+  try {
+    const user = await userService.getUser(req.params.id);
+    req.user = user;
+    next();
+  } catch (err) {}
+};
+
+const updateUser = async (req, res, next) => {
+  try {
+    const updatedUser = await userService.updateUser(req.params.id, req.body);
+    req.updatedUser = updatedUser;
+    next();
+  } catch (err) {
+    console.error(err);
   }
 };
 
 module.exports = {
   registerUser,
+  getUser,
+  updateUser,
 };
