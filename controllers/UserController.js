@@ -19,7 +19,18 @@ const getUser = async (req, res, next) => {
   } catch (err) {}
 };
 
+const updateUser = async (req, res, next) => {
+  try {
+    const updatedUser = await userService.updateUser(req.params.id, req.body);
+    req.updatedUser = updatedUser;
+    next();
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 module.exports = {
   registerUser,
   getUser,
+  updateUser,
 };
