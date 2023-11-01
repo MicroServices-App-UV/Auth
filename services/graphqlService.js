@@ -13,9 +13,7 @@ const shareID = async (req, res, next) => {
         id: req.session.user._id,
       }
     )
-      .then((data) =>
-        console.log("Se ha creado el usuario, que gonorrea: ", data)
-      )
+      .then((data) => res.redirect("http://localhost:3001/"))
       .catch((error) => console.error(error));
   } catch (error) {
     console.error(error);
