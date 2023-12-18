@@ -5,6 +5,11 @@ const { registerUser } = require("../controllers/UserController");
 // @route GET /
 router.get("/login", (req, res) => {
   res.render("login", { layout: "login" });
+  // res.redirect("http://localhost:3001");
+});
+
+router.get("/menu", (req, res) => {
+  res.redirect("http://localhost:3001");
 });
 
 // @ desc SignUp page
