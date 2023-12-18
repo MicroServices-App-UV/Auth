@@ -47,7 +47,7 @@ app.use("/auth", require("./routes/auth"));
 app.use("/graphql", require("./routes/graphql"));
 app.use("/user", require("./routes/user"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 
 app.listen(
   PORT,
