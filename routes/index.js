@@ -9,7 +9,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/menu", (req, res) => {
-  res.redirect("http://localhost:3001");
+  res.redirect("http://20.232.255.29/");
 });
 
 // @ desc SignUp page
